@@ -39,6 +39,10 @@ public struct Options
 ### 栗子
 使用“测试.xlsx”进行转换，根据下方的table生成两个CSharp文件， [CombatExpDef](./TinyConfig/Test/CombatExpDef.cs), [OtherExpDef](./TinyConfig/Test/OtherExpDef.cs)
 
+每个类包含3个静态模块:
+> * Load(string)，加载读取的csv数据
+> * Values，所有def的List
+> * Find(int ...), 根据上方标识的“_key”获取单个配置项
 
 ### TODO
 * 支持转义

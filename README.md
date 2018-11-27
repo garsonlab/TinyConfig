@@ -21,6 +21,8 @@ Excel快速转换CSV工具，并生成CSharp读取配置文件。
 * 类型：支持 text(string), int, byte, long, float, double
 * _key指主键，用于查找配置表使用，至少1个，至多3个，类型为int
 
+*生成CSharp文件中，字段分割使用“#”，遇到数字自动识别成数组，其他识别成类。数组下标从1开始*
+
 
 ### Converter转换器使用
 ``` csharp
@@ -33,6 +35,10 @@ public struct Options
     public string nameSpace;//csharp 命名空间
 }
 ```
+
+### 栗子
+使用“测试.xlsx”进行转换，根据下方的table生成两个CSharp文件， [CombatExpDef](./TinyConfig/Test/CombatExpDef.cs), [OtherExpDef](./TinyConfig/Test/OtherExpDef.cs)
+
 
 ### TODO
 * 支持转义
